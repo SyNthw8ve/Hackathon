@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "hackhathon"
+name = "hera"
 version = "0.1.0"
 description = ""
 authors = ["Nuno Carriço <nuno.mcarrico@decsis.pt>"]
