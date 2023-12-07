@@ -1,4 +1,3 @@
-import asyncpg
 from asyncio.exceptions import TimeoutError
 
 from fastapi import FastAPI, status, Request
@@ -7,6 +6,7 @@ from fastapi.responses import JSONResponse
 from fastapi.encoders import jsonable_encoder
 
 from hera.server.api.heath_professional.route import router as health_professional_router
+from hera.server.api.pacient.route import router as pacient_router
 
 from hera.server.database import Base, engine
 
@@ -32,6 +32,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
     )
 
 app.include_router(health_professional_router)
+app.include_router(pacient_router)
 
 @app.get("/")
 async def root():
