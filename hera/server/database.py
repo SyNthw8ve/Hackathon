@@ -1,8 +1,12 @@
 import os
-import asyncpg
+
 from sqlalchemy import MetaData
 from sqlalchemy.orm import declarative_base, sessionmaker
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
+
+from dotenv import load_dotenv
+
+load_dotenv()
 
 POSTGRES_URL = os.getenv("POSTGRES_URL")
 POSTGRES_USER = os.getenv("POSTGRES_USER")
